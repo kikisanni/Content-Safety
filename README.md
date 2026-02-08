@@ -85,7 +85,7 @@ Metrics & Error Analysis
 - JSON export of all results for further analysis
 
 ### Production Readiness
-- Zero-cost local LLM deployment
+- Zero-cost local LLM inference via ollama
 - Graceful error handling and fallbacks
 - Performance tracking (tokens used, latency)
 - Reproducible results (low temperature)
