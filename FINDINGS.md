@@ -405,12 +405,6 @@ Actual  Yes     9     0    (Recall: 100%)
         No      6    36    (Precision: 60%)
 ```
 
----
-
-**Document Version:** 1.0  
-**Last Updated:** 8th February, 2026  
-**Next Review:** After implementing prompt improvements
-
 
 ---
 
@@ -568,3 +562,10 @@ To confirm this hypothesis and test fixes:
 2. **Prompt experiment** with explicit separation instructions
 3. **Sequential classification** test on same dataset
 4. **Measure improvement** in precision while maintaining 100% recall
+
+
+---
+
+**Document Version:** 1.0  
+**Last Updated:** 8th February, 2026  
+**Next Review:** After implementing prompt improvements
