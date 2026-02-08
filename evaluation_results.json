@@ -1,0 +1,1431 @@
+{
+  "metrics": {
+    "hate_speech": {
+      "category": "hate_speech",
+      "TP": 10,
+      "TN": 31,
+      "FP": 10,
+      "FN": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "accuracy": 0.803921568627451,
+      "total_samples": 51
+    },
+    "spam": {
+      "category": "spam",
+      "TP": 11,
+      "TN": 37,
+      "FP": 3,
+      "FN": 0,
+      "precision": 0.7857142857142857,
+      "recall": 1.0,
+      "f1": 0.88,
+      "accuracy": 0.9411764705882353,
+      "total_samples": 51
+    },
+    "misinformation": {
+      "category": "misinformation",
+      "TP": 11,
+      "TN": 40,
+      "FP": 0,
+      "FN": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "total_samples": 51
+    },
+    "harassment": {
+      "category": "harassment",
+      "TP": 9,
+      "TN": 36,
+      "FP": 6,
+      "FN": 0,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.7499999999999999,
+      "accuracy": 0.8823529411764706,
+      "total_samples": 51
+    }
+  },
+  "detailed_results": [
+    {
+      "text": "I think pineapple on pizza is great!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "No spam detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "All people from [country] are criminals and should be deported",
+      "ground_truth": {
+        "hate_speech": 1,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 1
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Attacks on people based on nationality",
+        "spam": "No commercial content",
+        "misinformation": "No provably false claims",
+        "harassment": "Targeted abuse and threat towards a group of people"
+      }
+    },
+    {
+      "text": "CLICK HERE NOW!!! FREE IPHONE 15!!! LIMITED TIME!!!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content detected",
+        "misinformation": "No provably false claims detected",
+        "harassment": "No targeted abuse or threats detected"
+      }
+    },
+    {
+      "text": "The Earth is flat and NASA has been lying",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 1.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "The claim is not based on a credible source and lacks evidence to support it",
+        "spam": "There is no commercial intent in this statement",
+        "misinformation": "The claim that the Earth is flat and NASA has been lying about it is provably false and lacks scientific evidence to support it",
+        "harassment": "There is no targeted abuse or threats in this statement"
+      }
+    },
+    {
+      "text": "You're a worthless idiot and I hope you die",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 1
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Threats and insults targeting an individual based on their identity",
+        "spam": "No commercial content or solicitation found",
+        "misinformation": "No provably false claims presented as fact",
+        "harassment": "Targeted abuse and threats toward an individual"
+      }
+    },
+    {
+      "text": "I strongly disagree with the Senator's economic policies",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "Political criticism is NOT hate speech",
+        "spam": "No commercial content detected",
+        "misinformation": "No provably false claims detected",
+        "harassment": "No targeted abuse or threats detected"
+      }
+    },
+    {
+      "text": "This damn traffic is so frustrating!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "Profanity used in a non-threatening context",
+        "spam": "No commercial content or solicitation",
+        "misinformation": "No provably false claims presented as fact",
+        "harassment": "No targeted abuse or threats toward individuals"
+      }
+    },
+    {
+      "text": "Join my amazing new business opportunity! DM me!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "Studies show vaccines cause autism",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 1.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "This statement is not hate speech as it does not attack people based on race, religion, gender, etc.",
+        "spam": "This statement is not spam as it is a factual claim about vaccines and autism",
+        "misinformation": "There is no scientific evidence to support the claim that vaccines cause autism",
+        "harassment": "This statement does not contain targeted abuse or threats toward individuals"
+      }
+    },
+    {
+      "text": "People who like [sports team] have no brain cells",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "The statement targets a specific group of people based on their interest in a sports team, implying they are unintelligent.",
+        "spam": "",
+        "misinformation": "",
+        "harassment": ""
+      }
+    },
+    {
+      "text": "[Racial slur] are ruining this country",
+      "ground_truth": {
+        "hate_speech": 1,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "The use of a racial slur is a clear indicator of hate speech.",
+        "spam": "",
+        "misinformation": "",
+        "harassment": ""
+      }
+    },
+    {
+      "text": "Get rich quick! Work from home! Guaranteed income!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content",
+        "misinformation": "No provably false claims",
+        "harassment": "No targeted abuse or threats"
+      }
+    },
+    {
+      "text": "Climate change is a Chinese hoax",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 1.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "Climate change is not a Chinese hoax, but rather a real and scientifically supported phenomenon.",
+        "spam": "The statement 'Climate change is a Chinese hoax' is an unsubstantiated claim presented as fact, likely intended to promote a particular agenda or sell a product.",
+        "misinformation": "There is no credible evidence to support the claim that climate change is a 'Chinese hoax'. This statement appears to be based on misinformation and may cause confusion among readers.",
+        "harassment": "The statement does not contain any personal attacks or threats towards individuals."
+      }
+    },
+    {
+      "text": "You should kill yourself, nobody wants you here",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 1
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Threats of self-harm and suicidal ideation",
+        "spam": "No commercial content",
+        "misinformation": "No provably false claims",
+        "harassment": "Targeted abuse and suicidal threats"
+      }
+    },
+    {
+      "text": "I respectfully disagree with your perspective",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "Lacks context to determine intent",
+        "spam": "Lacks commercial content or solicitation",
+        "misinformation": "No provably false claims presented as fact",
+        "harassment": "No targeted abuse or threats toward individuals"
+      }
+    },
+    {
+      "text": "Women belong in the kitchen, not in leadership",
+      "ground_truth": {
+        "hate_speech": 1,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "This statement contains a stereotype about women and their roles in society, which can be perceived as discriminatory.",
+        "spam": "",
+        "misinformation": "",
+        "harassment": ""
+      }
+    },
+    {
+      "text": "Buy now and get 50% off! Limited stock!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "The election was stolen by fraud",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.85,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "The statement does not contain hate speech as it is a claim about an election outcome and does not target specific individuals or groups.",
+        "spam": "The statement does not contain commercial content or solicitations.",
+        "misinformation": "There is no evidence to support the claim that an election was stolen by fraud, and this statement has been widely debunked as false.",
+        "harassment": "The statement does not contain targeted abuse or threats toward individuals."
+      }
+    },
+    {
+      "text": "Your opinion is stupid but you're entitled to it",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 0.5,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.5
+      },
+      "reasons": {
+        "hate_speech": "contains derogatory language targeting a person's opinion",
+        "spam": "no commercial content or solicitation",
+        "misinformation": "no provably false claims presented as fact",
+        "harassment": "contains threatening language towards the person's opinion"
+      }
+    },
+    {
+      "text": "All [religious group] are terrorists",
+      "ground_truth": {
+        "hate_speech": 1,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Accuses a group of people of being terrorists based on their religion",
+        "spam": "No commercial content found",
+        "misinformation": "Claim is provably false (no evidence to support the claim that all members of a religious group are terrorists)",
+        "harassment": "Targets a specific group of people with a derogatory statement"
+      }
+    },
+    {
+      "text": "Win a free vacation! Click this link now!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "Drinking bleach cures COVID-19",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 1.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "The text promotes a commercial claim about drinking bleach curing COVID-19, which is unsolicited and potentially harmful.",
+        "misinformation": "There is no scientific evidence to support the claim that drinking bleach cures COVID-19.",
+        "harassment": "No targeted abuse or threats are detected in the text."
+      }
+    },
+    {
+      "text": "I know where you live and I'm coming for you",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 1
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Threats against a person's safety and well-being",
+        "spam": "No commercial content or solicitation found",
+        "misinformation": "No provably false claims presented as fact",
+        "harassment": "Targeted abuse and threats toward an individual"
+      }
+    },
+    {
+      "text": "That movie was terrible and a waste of time",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "No spam detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "[Gender identity slur] are mentally ill",
+      "ground_truth": {
+        "hate_speech": 1,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "The term used is a gender identity slur, which can be perceived as derogatory and discriminatory towards individuals who identify with that particular gender.",
+        "spam": "",
+        "misinformation": "",
+        "harassment": "The statement is targeted at a specific group of people and can be perceived as threatening or abusive."
+      }
+    },
+    {
+      "text": "Make money fast with this one weird trick!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "5G towers are spreading coronavirus",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 1.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "The claim about 5G towers spreading coronavirus is not supported by scientific evidence and is considered a conspiracy theory.",
+        "spam": "There is no commercial intent in this statement.",
+        "misinformation": "The claim that 5G towers are spreading coronavirus is provably false and has been debunked by scientific evidence.",
+        "harassment": "There is no targeted abuse or threat in this statement."
+      }
+    },
+    {
+      "text": "Nobody likes you, you should just disappear",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 1
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Threats or abuse towards an individual",
+        "spam": "No commercial content",
+        "misinformation": "No provably false claims",
+        "harassment": "Threats or abuse towards an individual"
+      }
+    },
+    {
+      "text": "I prefer Android over iPhone",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "No spam detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "Immigrants are stealing our jobs and destroying society",
+      "ground_truth": {
+        "hate_speech": 1,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "contains derogatory language targeting a specific group (immigrants)",
+        "spam": "",
+        "misinformation": "",
+        "harassment": ""
+      }
+    },
+    {
+      "text": "Congratulations! You've won a prize! Claim here!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "Masks don't work against viruses",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 1.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "No spam detected",
+        "misinformation": "Claim that masks don't work against viruses has been proven false by scientific evidence.",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "@user You're such a loser, nobody respects you",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 1
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Attack on personal character",
+        "spam": "None",
+        "misinformation": "None",
+        "harassment": "Targeted abuse"
+      }
+    },
+    {
+      "text": "I think the government's policy is misguided",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "Political criticism is NOT hate speech",
+        "spam": "No commercial content detected",
+        "misinformation": "No provably false claims detected",
+        "harassment": "No targeted abuse or threats detected"
+      }
+    },
+    {
+      "text": "Poor people are lazy and deserve to be poor",
+      "ground_truth": {
+        "hate_speech": 1,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Attacks on people based on socioeconomic status",
+        "spam": "No commercial content",
+        "misinformation": "No provably false claims",
+        "harassment": "Targeted abuse of a socioeconomic group"
+      }
+    },
+    {
+      "text": "Limited time offer! Buy 2 get 1 free!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "The Holocaust never happened",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 1.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "The statement denies a well-documented historical event, which is a form of hate speech targeting Jewish people and other victims of the Holocaust.",
+        "spam": "",
+        "misinformation": "The statement presents a provably false claim as fact.",
+        "harassment": ""
+      }
+    },
+    {
+      "text": "Hey @user, go back to where you came from",
+      "ground_truth": {
+        "hate_speech": 1,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 1
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Attack on nationality or immigration status",
+        "spam": "",
+        "misinformation": "",
+        "harassment": "Targeted abuse or threat"
+      }
+    },
+    {
+      "text": "Check out my website for amazing deals!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "Essential oils cure cancer naturally",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 1.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "The statement contains a commercial claim about essential oils and their health benefits.",
+        "misinformation": "There is no scientific evidence to support the claim that essential oils cure cancer.",
+        "harassment": "No targeted abuse or threats detected"
+      }
+    },
+    {
+      "text": "You're annoying but I guess that's your right",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "The statement does not contain hate speech as it is a neutral expression of annoyance.",
+        "spam": "There is no commercial content or solicitation in the statement.",
+        "misinformation": "The statement does not contain provably false claims presented as fact.",
+        "harassment": "There is no targeted abuse or threats toward an individual in the statement."
+      }
+    },
+    {
+      "text": "[Homophobic slur]s should not be allowed to adopt",
+      "ground_truth": {
+        "hate_speech": 1,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "The use of a homophobic slur is a clear attack on people based on their sexual orientation.",
+        "spam": "",
+        "misinformation": "",
+        "harassment": "The statement is targeted at a specific group of people and could be perceived as threatening or intimidating."
+      }
+    },
+    {
+      "text": "Make $5000 per week working from home!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content",
+        "misinformation": "No provably false claims detected",
+        "harassment": "No targeted abuse or threats detected"
+      }
+    },
+    {
+      "text": "Biden/Trump (depending on perspective) stole the election",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.8,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "The statement does not contain hate speech as it is a neutral claim about an election.",
+        "spam": "The statement does not contain commercial content or solicitations.",
+        "misinformation": "The statement contains a provably false claim about the election outcome.",
+        "harassment": "The statement does not contain targeted abuse or threats toward individuals."
+      }
+    },
+    {
+      "text": "I hope you get hit by a bus",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 1
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Threats against a person's physical safety",
+        "spam": "None",
+        "misinformation": "None",
+        "harassment": "Threats against a person's physical safety"
+      }
+    },
+    {
+      "text": "Your argument has some logical flaws",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "Lacks context and intent to attack a person or group",
+        "spam": "No commercial content or solicitation present",
+        "misinformation": "No provably false claims presented as fact",
+        "harassment": "No targeted abuse or threats toward an individual"
+      }
+    },
+    {
+      "text": "People with disabilities are a burden on society",
+      "ground_truth": {
+        "hate_speech": 1,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Attacks on people based on disability status",
+        "spam": "No commercial content",
+        "misinformation": "No provably false claims",
+        "harassment": "Targeted abuse of people with disabilities"
+      }
+    },
+    {
+      "text": "Follow me for exclusive content! Link in bio!",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 1,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": true,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 1.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "Unsolicited commercial content detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    },
+    {
+      "text": "Chemtrails are being used for mind control",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 1,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": true,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 1.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "Chemtrails conspiracy theories are often used to spread misinformation and can be harmful to individuals who believe them.",
+        "spam": "This statement does not contain any clear commercial intent or solicitation.",
+        "misinformation": "There is no scientific evidence to support the claim that chemtrails are being used for mind control.",
+        "harassment": "This statement does not contain any direct threats or targeted abuse towards individuals."
+      }
+    },
+    {
+      "text": "@user Everyone thinks you're pathetic",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 1
+      },
+      "prediction": {
+        "hate_speech": true,
+        "spam": false,
+        "misinformation": false,
+        "harassment": true
+      },
+      "confidence": {
+        "hate_speech": 1.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 1.0
+      },
+      "reasons": {
+        "hate_speech": "Attack on a person's character",
+        "spam": "None",
+        "misinformation": "None",
+        "harassment": "Targeted abuse"
+      }
+    },
+    {
+      "text": "I found this analysis unconvincing",
+      "ground_truth": {
+        "hate_speech": 0,
+        "spam": 0,
+        "misinformation": 0,
+        "harassment": 0
+      },
+      "prediction": {
+        "hate_speech": false,
+        "spam": false,
+        "misinformation": false,
+        "harassment": false
+      },
+      "confidence": {
+        "hate_speech": 0.0,
+        "spam": 0.0,
+        "misinformation": 0.0,
+        "harassment": 0.0
+      },
+      "reasons": {
+        "hate_speech": "No hate speech detected",
+        "spam": "No spam detected",
+        "misinformation": "No misinformation detected",
+        "harassment": "No harassment detected"
+      }
+    }
+  ]
+}

@@ -7,7 +7,6 @@ import re
 def classify_content(text):
     """
     Classify text for safety issues using local Ollama LLM.
-    Completely free - runs on your machine!
     """
     
     prompt = f"""You are a content safety classifier for a social media platform.
@@ -136,7 +135,7 @@ if __name__ == "__main__":
     ]
     
     print("="*100)
-    print("OLLAMA CONTENT SAFETY CLASSIFICATION TEST (100% FREE & LOCAL)")
+    print("OLLAMA CONTENT SAFETY CLASSIFICATION TEST")
     print("="*100)
     
     for i, text in enumerate(test_cases, 1):
